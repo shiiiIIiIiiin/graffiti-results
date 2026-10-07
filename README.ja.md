@@ -26,9 +26,14 @@
 
 この作業の前、予想 198, 219, 252, 254, 262, 322, 712, 714 は、
 M. Roucairol and T. Cazenave, *Refutation of Spectral Graph Theory Conjectures with Search Algorithms*
-（[arXiv:2409.18626](https://arxiv.org/abs/2409.18626)、ECAI 2025）の表 1 で、
+（[arXiv:2409.18626](https://arxiv.org/abs/2409.18626)、2024）の表 1 で、
 M. Aouchiche and P. Hansen, *A survey of automated conjectures in spectral graph theory*, Linear Algebra Appl. 432 (2010) 2293–2322
 の状態に従って未解決とされていた。
+ただし 322 には補足が要る。Roucairol と Cazenave は用語の定義を疑い、range を「最大固有値 − 最小固有値」と読んで探索した。
+この読み方では 322 は自明に成り立つので、この探索は Graffiti の用語集の定義での 322 を調べたことにはならない。
+また、ある読み方では長さ 4 の閉路が反例になると報告しているが、その計算は Even に頂点自身を数えていない。
+用語集の定義では、長さ 4 の閉路は 322 を満たす。
+詳しい説明と出典は [graffiti-322-counterexample](https://github.com/shiiiIIiIiiin/graffiti-322-counterexample) にある。
 文献と、私たちの知る 2026 年の追跡サイトを調べたが、どこか別の場所で既に解決されていた可能性は否定できない。
 
 ## 結果の概要
@@ -67,11 +72,15 @@ Even(v) は v 自身を含めて v から偶数の距離にある頂点の数、
 
 ## 出典
 
-- S. Fajtlowicz, *Written on the Wall* (July 2004 version).
-- T. L. Brewster, M. J. Dinneen, V. Faber, Discrete Math. 147 (1995) 35–55（用語集）.
-- M. Aouchiche, P. Hansen, Linear Algebra Appl. 432 (2010) 2293–2322.
-- M. Roucairol, T. Cazenave, arXiv:2409.18626 (ECAI 2025).
-- X.-D. Zhang, *On the two conjectures of Graffiti*, Linear Algebra Appl. 385 (2004) 369–379.
+- S. Fajtlowicz, *Written on the Wall* (July 2004 version). 写し：[wow-july2004.pdf](https://github.com/RoucairolMilo/refutation-COCOON2022/blob/795ff6797ee3875cd36d715515099a48568a451a/wow-july2004.pdf)。
+- T. L. Brewster, M. J. Dinneen, V. Faber, A computational attack on the conjectures of Graffiti: New counterexamples and proofs,
+  Discrete Math. 147 (1995) 35–55（用語集）. [doi:10.1016/0012-365X(94)00227-A](https://doi.org/10.1016/0012-365X(94)00227-A)
+- M. Aouchiche, P. Hansen, A survey of automated conjectures in spectral graph theory, Linear Algebra Appl. 432 (2010) 2293–2322.
+  [doi:10.1016/j.laa.2009.06.015](https://doi.org/10.1016/j.laa.2009.06.015)
+- M. Roucairol, T. Cazenave, Refutation of Spectral Graph Theory Conjectures with Search Algorithms,
+  [arXiv:2409.18626](https://arxiv.org/abs/2409.18626) (2024).
+- X.-D. Zhang, On the two conjectures of Graffiti, Linear Algebra Appl. 385 (2004) 369–379.
+  [doi:10.1016/j.laa.2003.12.014](https://doi.org/10.1016/j.laa.2003.12.014)
 
 ## ライセンス
 

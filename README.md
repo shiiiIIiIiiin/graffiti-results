@@ -26,8 +26,13 @@ verification scripts, is in its own repository linked below.
 
 Before this work, conjectures 198, 219, 252, 254, 262, 322, 712 and 714 were listed as open in
 M. Roucairol and T. Cazenave, *Refutation of Spectral Graph Theory Conjectures with Search Algorithms*
-([arXiv:2409.18626](https://arxiv.org/abs/2409.18626), ECAI 2025), Table 1, following the status in
+([arXiv:2409.18626](https://arxiv.org/abs/2409.18626), 2024), Table 1, following the status in
 M. Aouchiche and P. Hansen, *A survey of automated conjectures in spectral graph theory*, Linear Algebra Appl. 432 (2010) 2293–2322.
+For 322 this needs a qualification: Roucairol and Cazenave questioned the terminology and searched with the range read as
+the largest eigenvalue minus the smallest, a reading under which 322 is trivially true, so their search did not test 322
+as defined in the Graffiti glossary. Under one reading they also report the 4-cycle as a counterexample, but that computation
+does not count the vertex itself in Even; with the glossary's definitions the 4-cycle satisfies 322.
+See [graffiti-322-counterexample](https://github.com/shiiiIIiIiiin/graffiti-322-counterexample) for the details and sources.
 We searched the literature and the 2026 trackers we knew of, but cannot exclude that some of these were settled elsewhere.
 
 ## The results in brief
@@ -68,11 +73,15 @@ Conjecture 584 was added to graffiti-short-proofs later the same day (release v1
 
 ## Sources
 
-- S. Fajtlowicz, *Written on the Wall* (July 2004 version).
-- T. L. Brewster, M. J. Dinneen, V. Faber, Discrete Math. 147 (1995) 35–55 (glossary of terms).
-- M. Aouchiche, P. Hansen, Linear Algebra Appl. 432 (2010) 2293–2322.
-- M. Roucairol, T. Cazenave, arXiv:2409.18626 (ECAI 2025).
-- X.-D. Zhang, *On the two conjectures of Graffiti*, Linear Algebra Appl. 385 (2004) 369–379.
+- S. Fajtlowicz, *Written on the Wall* (July 2004 version). Copy: [wow-july2004.pdf](https://github.com/RoucairolMilo/refutation-COCOON2022/blob/795ff6797ee3875cd36d715515099a48568a451a/wow-july2004.pdf).
+- T. L. Brewster, M. J. Dinneen, V. Faber, A computational attack on the conjectures of Graffiti: New counterexamples and proofs,
+  Discrete Math. 147 (1995) 35–55 (glossary of terms). [doi:10.1016/0012-365X(94)00227-A](https://doi.org/10.1016/0012-365X(94)00227-A)
+- M. Aouchiche, P. Hansen, A survey of automated conjectures in spectral graph theory, Linear Algebra Appl. 432 (2010) 2293–2322.
+  [doi:10.1016/j.laa.2009.06.015](https://doi.org/10.1016/j.laa.2009.06.015)
+- M. Roucairol, T. Cazenave, Refutation of Spectral Graph Theory Conjectures with Search Algorithms,
+  [arXiv:2409.18626](https://arxiv.org/abs/2409.18626) (2024).
+- X.-D. Zhang, On the two conjectures of Graffiti, Linear Algebra Appl. 385 (2004) 369–379.
+  [doi:10.1016/j.laa.2003.12.014](https://doi.org/10.1016/j.laa.2003.12.014)
 
 ## License
 
