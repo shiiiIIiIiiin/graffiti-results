@@ -2,7 +2,7 @@
 
 [日本語](README.ja.md)
 
-Shin Kimura (木村心), October 2026
+Shin Kimura (木村心), 2026-10-07
 
 The results were obtained with the help of AI (Claude Opus 5.5 by Anthropic and GPT-6.1 Sol by OpenAI).
 

@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-木村心（Shin Kimura）、2026 年 10 月
+木村心（Shin Kimura）、2026-10-07
 
 結果は AI（Anthropic の Claude Opus 5.5 と OpenAI の GPT-6.1 Sol）の助けを借りて得た。
 
