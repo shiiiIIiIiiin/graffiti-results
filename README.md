@@ -2,7 +2,7 @@
 
 [日本語](README.ja.md)
 
-Shin Kimura (木村心), 2026-10-07
+Shin Kimura (木村心), 2026-10-07 (updated 2026-10-08)
 
 The results were obtained with the help of AI (Claude Opus 5.5 by Anthropic and GPT-6.1 Sol by OpenAI).
 
@@ -14,7 +14,7 @@ verification scripts, is in its own repository linked below.
 
 | conjecture | statement (abbreviated) | result | repository |
 |---|---|---|---|
-| 322 | triangle-free ⇒ Inverse Even ≤ range of eigenvalues of Distance | **false**: counterexample on 2048 vertices | [graffiti-322-counterexample](https://github.com/shiiiIIiIiiin/graffiti-322-counterexample) |
+| 322 | triangle-free ⇒ Inverse Even ≤ range of eigenvalues of Distance | **false**: counterexamples on 2048 and 1024 vertices | [graffiti-322-counterexample](https://github.com/shiiiIIiIiiin/graffiti-322-counterexample) |
 | 262 | −smallest eigenvalue ≤ maximum of Even | **true** (in a stronger form) | [graffiti-262-proof](https://github.com/shiiiIIiIiiin/graffiti-262-proof) |
 | 714 | −mean of nonpositive eigenvalues ≤ sum of reciprocals of all temperatures | **true** | [graffiti-714-proof](https://github.com/shiiiIIiIiiin/graffiti-714-proof) |
 | 198 | minimum of derivative of eigenvalues ≤ n / mean gravity | **true** (for every connected graph) | [graffiti-short-proofs](https://github.com/shiiiIIiIiiin/graffiti-short-proofs) |
@@ -45,6 +45,9 @@ those of the adjacency matrix $`A`$.
 - **322 (counterexample).** The coset graph of the binary Golay code $`[23,12,7]`$ is triangle-free with 2048 vertices.
   Every vertex has Even $`= 254`$, so Inverse Even $`= 2048/254 = 1024/127 \approx 8.06`$, while the distance matrix has
   exactly 4 distinct eigenvalues ($`5842, 10, -14, -30`$). Verified by exact integer computations in two independent ways.
+  The coset graph of the punctured code $`[22,12,6]`$ (1024 vertices) is also a counterexample: every vertex has
+  Even $`= 232`$, so Inverse Even $`= 1024/232 = 128/29 \approx 4.41`$, while the distance matrix has only 3 distinct
+  eigenvalues ($`2794, 10, -22`$) (added on 2026-10-08; see the History of graffiti-322-counterexample).
 - **262.** $`A + \mathrm{diag}(1 + s_v)`$ is positive semidefinite, where $`s_v`$ is the number of vertices at distance exactly 2
   from $`v`$; hence $`-\lambda_{\min}(A) \le 1 + \max_v s_v \le \max_v \mathrm{Even}(v)`$.
 - **714.** With $`S`$ the sum of the positive eigenvalues, $`N`$ the number of nonpositive eigenvalues, $`q`$ the number of
@@ -70,6 +73,7 @@ First publication of each repository (time of creation on GitHub, UTC) and snaps
 | graffiti-262-proof | 2026-10-07 11:36 | [web.archive.org/web/20261007113711](https://web.archive.org/web/20261007113711/https://github.com/shiiiIIiIiiin/graffiti-262-proof) |
 
 Conjecture 584 was added to graffiti-short-proofs later the same day (release v1.1.0).
+The counterexample with 1024 vertices was added to graffiti-322-counterexample on 2026-10-08.
 
 ## Sources
 

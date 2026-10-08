@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-木村心（Shin Kimura）、2026-10-07
+木村心（Shin Kimura）、2026-10-07（2026-10-08 更新）
 
 結果は AI（Anthropic の Claude Opus 5.5 と OpenAI の GPT-6.1 Sol）の助けを借りて得た。
 
@@ -14,7 +14,7 @@
 
 | 予想 | 主張（略） | 結果 | リポジトリ |
 |---|---|---|---|
-| 322 | 三角形なし ⇒ Inverse Even ≤ 距離行列の固有値の range | **偽**：2048 頂点の反例 | [graffiti-322-counterexample](https://github.com/shiiiIIiIiiin/graffiti-322-counterexample) |
+| 322 | 三角形なし ⇒ Inverse Even ≤ 距離行列の固有値の range | **偽**：2048 頂点と 1024 頂点の反例 | [graffiti-322-counterexample](https://github.com/shiiiIIiIiiin/graffiti-322-counterexample) |
 | 262 | −最小固有値 ≤ Even の最大値 | **真**（より強い形で） | [graffiti-262-proof](https://github.com/shiiiIIiIiiin/graffiti-262-proof) |
 | 714 | −(0 以下の固有値の平均) ≤ すべての temperature の逆数の和 | **真** | [graffiti-714-proof](https://github.com/shiiiIIiIiiin/graffiti-714-proof) |
 | 198 | 固有値の derivative の最小値 ≤ n / mean gravity | **真**（すべての連結グラフで） | [graffiti-short-proofs](https://github.com/shiiiIIiIiiin/graffiti-short-proofs) |
@@ -46,6 +46,9 @@ Even(v) は v 自身を含めて v から偶数の距離にある頂点の数、
 - **322（反例）.** 2 元 Golay 符号 $`[23,12,7]`$ の剰余類グラフは、2048 頂点の三角形を含まないグラフである。
   どの頂点でも Even $`= 254`$ なので Inverse Even $`= 2048/254 = 1024/127 \approx 8.06`$ だが、
   距離行列の異なる固有値はちょうど 4 個（$`5842, 10, -14, -30`$）しかない。2 通りの独立な整数の厳密計算で確かめた。
+  座標を 1 つ削った $`[22,12,6]`$ 符号の剰余類グラフ（1024 頂点）も反例である。どの頂点でも Even $`= 232`$ なので
+  Inverse Even $`= 1024/232 = 128/29 \approx 4.41`$ だが、距離行列の異なる固有値は 3 個（$`2794, 10, -22`$）しかない
+  （2026-10-08 に追加。経緯は graffiti-322-counterexample の更新履歴にある）。
 - **262.** $`v`$ からちょうど距離 2 にある頂点の数を $`s_v`$ とすると、$`A + \mathrm{diag}(1 + s_v)`$ は半正定値である。
   したがって $`-\lambda_{\min}(A) \le 1 + \max_v s_v \le \max_v \mathrm{Even}(v)`$。
 - **714.** 正の固有値の和を $`S`$、0 以下の固有値の個数を $`N`$、負の固有値の個数を $`q`$、平均次数を $`d`$ とすると
@@ -69,6 +72,7 @@ Even(v) は v 自身を含めて v から偶数の距離にある頂点の数、
 | graffiti-262-proof | 2026-10-07 11:36 | [web.archive.org/web/20261007113711](https://web.archive.org/web/20261007113711/https://github.com/shiiiIIiIiiin/graffiti-262-proof) |
 
 予想 584 は、同じ日のあとから graffiti-short-proofs に追加した（リリース v1.1.0）。
+graffiti-322-counterexample には、2026-10-08 に 1024 頂点の反例を追加した。
 
 ## 出典
 
